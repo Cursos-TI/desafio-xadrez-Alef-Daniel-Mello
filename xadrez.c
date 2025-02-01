@@ -19,8 +19,7 @@ int main() {
     scanf("%d",&CasasBispo);
     for (int Movimento = 0;Movimento < CasasBispo; Movimento++)
     {
-        printf("Direita!\n");
-        printf("Cima!\n");
+        MovimentoBispo();
 
     }
     printf("\n");
@@ -49,10 +48,9 @@ int main() {
    
     printf("Digite por favor o número de movimentos do Cavalo!\n");
     scanf("%d",&CasasCavalo);
-    for (int Movimento = 0;Movimento < CasasCavalo; Movimento++)
+    for (int Movimento = 0, MovimentoDuplo = 2;Movimento < CasasCavalo; Movimento++)
     {
-        int MovimentoDuplo = 2;
-        while (MovimentoDuplo > 0)
+        while (MovimentoDuplo <= 0)
         {
           printf("Baixo!\n");
           MovimentoDuplo--;
@@ -69,4 +67,8 @@ int main() {
     // Inclua o uso de continue e break dentro dos loops.
 
     return 0;
+}
+void MovimentoBispo(){
+    printf("Direita!\n");
+        printf("Cima!\n");
 }
